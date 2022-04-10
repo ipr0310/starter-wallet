@@ -27,11 +27,13 @@ export const Authenticator = () => {
       })
       .then((assertion) => {
         console.log("ASSERTION");
-        alert(JSON.stringify(assertion));
+        console.log(assertion);
+        alert(assertion);
       })
       .catch((err) => {
         console.log("ERROR");
-        alert(JSON.stringify(err));
+        console.log(err);
+        alert(err);
       });
   };
 

@@ -13,7 +13,7 @@ export const TestingFeature = () => {
 
         <div className="w-full border-t border-gray-300 my-4"></div>
 
-        <QrCodeReader />
+        {/* <QrCodeReader /> */}
       </div>
     </div>
   );
