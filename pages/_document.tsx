@@ -17,13 +17,13 @@ export default class MyDocument extends Document<Props> {
           />
 
           {/* PWA SETUP */}
-          <meta name="application-name" content="Fixcoin.eco" />
+          <meta name="application-name" content="WallyApp" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="Fixcoin.eco" />
+          <meta name="apple-mobile-web-app-title" content="WallyApp" />
           <meta name="description" content="bla bla bla" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />

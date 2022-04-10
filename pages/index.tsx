@@ -17,7 +17,7 @@ const HomePage: NextPage<Props> = ({ url }) => {
     <Layout>
       {data && (
         <SEOMetaTags
-          title={data.name + " • FixcoinApp"}
+          title={"Initial Wallet MVP"}
           description={data.description || null}
           // add here an image for SEO
           // imgUrl={some image url}
@@ -32,6 +32,7 @@ const HomePage: NextPage<Props> = ({ url }) => {
 export default function Page({ fallback }: { fallback: any }) {
   return (
     <SWRConfig value={{ fallback }}>
+      {/* @ts-ignore */}
       <HomePage url={fallback.fetchingUrl} />
     </SWRConfig>
   );

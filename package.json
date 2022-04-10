@@ -24,7 +24,7 @@
     "@signumjs/util": "^1.0.0-rc.17",
     "localforage": "^1.10.0",
     "next": "^12.1.0",
-    "next-pwa": "^5.4.6",
+    "next-pwa": "^5.5.0",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-device-detect": "^2.1.2",

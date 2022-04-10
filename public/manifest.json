@@ -1,6 +1,6 @@
 {
-  "name": "FixcoinApp",
-  "short_name": "FixcoinApp",
+  "name": "WallyApp",
+  "short_name": "WallyApp",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",

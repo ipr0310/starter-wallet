@@ -1,3 +1,4 @@
+import * as React from "react";
 import type { AppProps } from "next/app";
 import { Provider as ReduxProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -9,20 +10,21 @@ import { SEOMetaTags } from "@/app/components/SEOMetaTags";
 import { AppInitializer } from "@/app/components/AppInitializer";
 
 import "./globals.css";
-import * as React from "react";
 
 const persistor = persistStore(store);
 
-// TODO: we can get the host (Canonical) dynamically - no need for an env var here
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
+  // @ts-ignore
+  const content = <Component {...pageProps} />;
+
   return (
     <AppContextProvider>
       <SEOMetaTags
-        title="Fixcoin.eco"
+        title="Initial wallet MVP"
         // canonical={Config.Platform.CanonicalUrl + router.asPath}
         // imgUrl={Config.Platform.CanonicalUrl + "/assets/img/seo.jpg"}
         keywords="Blockchain, Payback, Fidelity, Signum"
-        description="bla bla bla"
+        description="Making initial MVP for PWA wallet"
         viewport="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
       />
 
@@ -30,16 +32,17 @@ function App({ Component, pageProps }: AppProps) {
         {isClientSide() ? (
           <>
             <AppInitializer />
+            {/* @ts-ignore */}
             <PersistGate loading={null} persistor={persistor}>
-              <Component {...pageProps} />
+              {content}
             </PersistGate>
           </>
         ) : (
-          <Component {...pageProps} />
+          content
         )}
       </ReduxProvider>
     </AppContextProvider>
   );
-}
+};
 
 export default App;
