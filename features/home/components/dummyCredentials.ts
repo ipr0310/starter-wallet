@@ -1,3 +1,4 @@
+// must be a cryptographically random number sent from a server
 let challengeBytes = new Uint8Array(16).buffer;
 
 // sample arguments for registration
@@ -8,7 +9,7 @@ export const createCredentialDefaultArgs: any = {
       name: "Signum Network FOSS",
     },
 
-    // User:
+    // Whatever User Data:
     user: {
       id: new Uint8Array(16),
       name: "debbya@signum.network",
@@ -37,7 +38,6 @@ export const createCredentialDefaultArgs: any = {
 export let getCredentialDefaultArgs: any = {
   publicKey: {
     timeout: 60000,
-    // allowCredentials: [newCredential] // see below
     challenge: new Uint8Array([
       // must be a cryptographically random number sent from a server
       0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15,
