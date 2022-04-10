@@ -1,6 +1,7 @@
 {
   "name": "WallyApp",
   "short_name": "WallyApp",
+  "description": "The Wally Signum Mobile Wallet is the fastest way to send and receive Signa coins.",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -12,6 +13,15 @@
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.webp",
+      "sizes": "475x950",
+      "type": "image/webp",
+      "platform": "narrow",
+      "label": "Homescreen of the Wally App"
     }
   ],
   "theme_color": "#000000",
